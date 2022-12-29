@@ -67,8 +67,9 @@ def winner(board):
     """
     Returns the winner of the game, if there is one.
     """
-    # Check rows
-    if all(i == board[0][0] for i in board[0]):
+    # BELOW ALL CONDITION STATEMENT MUST HAVE 'and board[r][c] != EMPTY' EHRE r,c -> row and col according to the situation
+    # Check rows   
+    if all(i == board[0][0] for i in board[0]):                      
         return board[0][0]
     elif all(i == board[1][0] for i in board[1]):
         return board[1][0]
